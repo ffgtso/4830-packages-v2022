@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ffgt-geolocstion\n"
+"Project-Id-Version: ffgt-geolocation\n"
 "PO-Revision-Date: 2015-03-23 02:18+0100\n"
 "Last-Translator: Kai 'wusel' Siering <wusel@guetersloh.freifunk.net>\n"
 "Language-Team: German\n"
