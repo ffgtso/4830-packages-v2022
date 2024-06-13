@@ -8,7 +8,7 @@ include $(TOPDIR)/../package/gluon.mk
 
 define Package/ffgt-geolocator
   TITLE:=FFGT Geolocator
-  DEPENDS:=+ffgt-location
+  #DEPENDS:=+ffgt-location
 endef
 
 define Package/ffgt-geolocator/description
