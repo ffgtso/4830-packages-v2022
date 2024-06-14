@@ -24,7 +24,7 @@ if [ -e /lib/gluon/config-mode/wizard-ffgt ]; then
       cp -p /rom/lib/gluon/config-mode/wizard/$i /lib/gluon/config-mode/wizard/
     fi
   done
-  for i in 0100-hostname.lua 0400-geo-location.lua 0500-contact-info.lua
+  for i in 0100-hostname.lua 0400-geo-location.lua 0500-contact-info.lua 0300-mesh-vpn.lua
   do
     if [ -e /lib/gluon/config-mode/wizard/$i ]; then
       /bin/rm /lib/gluon/config-mode/wizard/$i
