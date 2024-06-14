@@ -12,7 +12,7 @@ local contact = uci:get_first('gluon-node-info', 'owner', 'contact')
 local msg = site_i18n._translate('gluon-config-mode:reboot')
 if not msg then return end
 
-msg = msg .. "<p>Thänk you for surfing via 4830.org e. V. ;)<p>"
+msg = msg .. "<p>Thänk you for sörfing with 4830.org ;)<p>"
 
 renderer.render_string(msg, {
 	hostname = hostname,

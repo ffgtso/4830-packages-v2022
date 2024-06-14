@@ -127,5 +127,18 @@ msgstr "Als Betriebsposition für Deinen Knoten haben wir notiert:"
 msgid "Geolocation successful"
 msgstr "Geolokalisierung erfolgreich"
 
-msgid 'The following data has been computed already, there should be no need to change anything.'
-msgstr 'Die folgenden Daten wurden bereits als korrekt errechnet, bitte nur nach Aufforderung ändern.'
+msgid "The following data has been computed already, there should be no need to change anything."
+msgstr "Die folgenden Daten wurden bereits als korrekt errechnet, bitte nur nach Aufforderung ändern."
+
+msgid ""
+"Your internet connection can be used to establish a VPN connection with "
+"other nodes. Enable this option if there are no other nodes reachable over "
+"WLAN in your vicinity or you want to make a part of your connection's "
+"bandwidth available for the network. You can limit how much bandwidth the "
+"node will use at most."
+msgstr ""
+"Dein Knoten kann deine Internetverbindung nutzen, um darüber eine VPN-"
+"Verbindung zu anderen Knoten aufzubauen. Die dafür genutzte Bandbreite "
+"kannst Du beschränken. Aktiviere die Option, falls keine per WLAN "
+"erreichbaren Nachbarknoten in Deiner Nähe sind oder du Deine "
+"Internetverbindung für das Mesh-Netzwerk zur Verfügung stellen möchtest."
