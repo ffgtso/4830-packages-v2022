@@ -145,3 +145,12 @@ msgstr ""
 "(Es ist ratsam, Mesh-VPN per WAN generell aktiviert zu lassen, somit kann "
 "ein Knoten einfach per WAN-Verbindung oder per WLAN-Mesh genutzt werden, "
 "daher haben wir dieses vorausgewählt.)"
+
+msgid "Remote access"
+msgstr "Remotezugriff"
+
+msgid "WARNING: You have not configured any SSH keys, you will not have SSH access to the running node!"
+msgstr "ACHTUNG: Es wurden keine SSH-Schlüssel hinterlegt; SSH-Zugriff auf den laufenden Knoten ist nicht möglich!"
+
+msgid "There are SSH keys (%s) configured, fine!"
+msgstr "Es wurde(n) %s SSH-Schlüssel hinterlegt, sehr gut!"
