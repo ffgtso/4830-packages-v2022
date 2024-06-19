@@ -2,8 +2,7 @@
 
 if [ ! -x /usr/sbin/iw ]; then
   echo "$0: iw binary not found."
-  logger "$0: iw binary not found."
- exit 0
+  exit 0
 fi
 
 NUMPHY=$(iw list | grep ^Wiphy | wc -l)
