@@ -2,8 +2,10 @@
 
 BOARD="$(cat /tmp/sysinfo/board_name)"
 if [ "${BOARD}" = "dlink,dap-x1860-a1" ]; then
+  logger "$0: Check rssid_wlan1 on ${BOARD}"                                                 
   RSSID_DEV="$(uci get system.rssid_wlan1.dev 2>&1)"
-  if [ "${RSSID_DEV}" = "wlan1" ]; then
+  if [ "${RSSID_DEV}" = "wlan1" ]; then       
+    logger "$0: set system.rssid_wlan1.dev to mesh1"
     uci set system.rssid_wlan1.dev='mesh1' ||:
     uci commit system >/dev/null 2>&1 ||:
   fi
