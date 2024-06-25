@@ -1,8 +1,11 @@
 #!/bin/sh
 
 BOARD="$(cat /tmp/sysinfo/board_name)"
+logger "$0: This is ${BOARD}"
+
+
 if [ "${BOARD}" = "dlink,dap-x1860-a1" ]; then
-  logger "$0: Check rssid_wlan1 on ${BOARD}"                                                 
+  logger "$0: Check rssid_wlan1"
   RSSID_DEV="$(uci get system.rssid_wlan1.dev 2>&1)"
   if [ "${RSSID_DEV}" = "wlan1" ]; then       
     logger "$0: set system.rssid_wlan1.dev to mesh1"
@@ -10,3 +13,10 @@ if [ "${BOARD}" = "dlink,dap-x1860-a1" ]; then
     uci commit system >/dev/null 2>&1 ||:
   fi
 fi
+
+if [ "${BOARD}" = "linksys,ea8300" -o "${BOARD}" = "linksys,mr8300" -o "${BOARD}" = "linksys,ea6350v3" ]; then
+  logger "$0: fw_setenv kernsize 500000 on ${BOARD}"
+  fw_setenv kernsize 500000 # Enlarge kernel partition, needed for OpenWrt 23+
+fi
+
+logger "$0: Done with ${BOARD}"

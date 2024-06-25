@@ -6,23 +6,10 @@ BOARDNAME="$(cat /tmp/sysinfo/board_name)"
 # Ensure Gluon has workable PHYs that support Mesh as radio0 & radio1 ...
 # (OpenWrt 22.04 does not support 802.11s on DFS channels anymore.)
 
-if [ "${BOARDNAME}" = "linksys,ea8300" ]; then
+if [ "${BOARDNAME}" = "linksys,ea8300" -o "${BOARDNAME}" = "linksys,mr8300" ]; then
   uci set wireless.radio0.path='platform/soc/a800000.wifi'
   uci set wireless.radio2.path='soc/40000000.pci/pci0000:00/0000:00:00.0/0000:01:00.0'
   uci commit wireless
   wifi reload ||:
-  fw_setenv kernsize 500000 # Enlarge kernel partition, needed for OpenWrt 23+
-fi
-
-if [ "${BOARDNAME}" = "linksys,mr8300" ]; then
-  uci set wireless.radio0.path='platform/soc/a800000.wifi'
-  uci set wireless.radio2.path='soc/40000000.pci/pci0000:00/0000:00:00.0/0000:01:00.0'
-  uci commit wireless
-  wifi reload ||:
-  fw_setenv kernsize 500000 # Enlarge kernel partition, needed for OpenWrt 23+
-fi
-
-if [ "${BOARDNAME}" = "linksys,ea6350v3" ]; then
-  fw_setenv kernsize 500000 # Enlarge kernel partition, needed for OpenWrt 23+
 fi
 
