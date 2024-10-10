@@ -31,8 +31,9 @@ if locode then
 	io.stderr:write(string.format("Information: setting FFGT locode '%s' as domain code for site.conf.\n", locode))
     uci:set('gluon', 'core', 'domain', locode)
     uci:commit('gluon')
-    if cleanup_needed==1 then
-        uci:delete('gluon-node-info', '@location[0]', 'siteselect')
-        uci:commit('gluon-node-info')
-    end
+end
+
+if cleanup_needed==1 then
+    uci:delete('gluon-node-info', '@location[0]', 'siteselect')
+    uci:commit('gluon-node-info')
 end
